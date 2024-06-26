@@ -1,8 +1,8 @@
-class CpfVerifiersController < ApplicationController
+class CpfVerificationsController < ApplicationController
   def new
   end
 
-  def verify
+  def create
     cpf = params["cpf"]
     file = File.open("lib/assets/cpfs_validos.txt")
     file_data = file.readlines.map(&:chomp)

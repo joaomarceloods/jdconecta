@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <a href="/users/sign_out" data-turbo-method="delete">Sair</a>
+    <% else %>
+      <a href="/cpf/verificar">Entrar</a>
+    <% end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
